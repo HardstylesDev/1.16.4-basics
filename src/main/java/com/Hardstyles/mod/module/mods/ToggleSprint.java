@@ -28,7 +28,7 @@ public class ToggleSprint extends Module {
 
     @Override
     public void onRenderTick(TickEvent.RenderTickEvent world) {
-        if ( mc.world != null && mc.player != null && mc.currentScreen == null) {
+        if ((mc.world != null && mc.player != null) && (mc.currentScreen == null || mc.currentScreen instanceof ModGui)) {
             InputMappings.Input sprintKeyBind = mc.gameSettings.keyBindSprint.getKey();
             KeyBinding.setKeyBindState(sprintKeyBind, true);
             KeyBinding.onTick(sprintKeyBind);
