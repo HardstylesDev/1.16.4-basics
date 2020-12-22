@@ -9,7 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 public class ArmorStatus {
     Minecraft mc = Minecraft.getInstance();
     public static boolean enabled = true;
-
+// yea
     public void onDisable() {
         InputMappings.Input sprintKeyBind = mc.gameSettings.keyBindSprint.getKey();
         KeyBinding.setKeyBindState(sprintKeyBind, false);
